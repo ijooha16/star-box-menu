@@ -1,15 +1,19 @@
+ul,li{
+  list-style: none;
+  padding:0;
+}
+
 body {
   font-family: Arial, sans-serif;
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-  position:relative;
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
 }
 
 #logo{
   width: 300px;
   height: 150px;
-  margin:10px auto;
+  margin:10px auto 30px auto;
 }
 
 #logo img{
@@ -18,51 +22,80 @@ body {
 
 /* 여기에 #menu와 #order-summary의 스타일을 추가하세요. */
 #menu{
-  position:absolute;
-  top:190px;
-  left:50%;
-  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   border:1px solid #999;
-  border-radius: 8px;
+  border-radius: 15px;
   padding:20px;
-  width: 700px;
-  height: 500px;
+  width: 600px;
+  gap:10px;
 }
 
-#menu div{
+.menu-left{
+  display: flex;
+  align-items: center;
+}
+
+.menu-item{
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
-  position:relative;
 }
 
-
-#menu div p{
-  position:absolute;
-  left:500px;
+.menu-img{
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin-right:20px;
+  border-radius: 50%;
 }
 
-#menu div button{
-  justify-self: flex-end;
+.menu-right{
+  display: flex;
+  align-items: center;
+}
+
+.menu-price{
+  margin-right: 10px;
 }
 
 #order-summary{
-  position: absolute;
-  left:50%;
-  transform: translateX(-50%);
-  top:750px;
+  margin-top:30px;
   border:1px solid #999;
-  border-radius: 8px;
+  border-radius: 15px;
   padding:20px;
-  width: 700px;
-  height: 200px;
+  width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+
+.list-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.order-right{
+  display: flex;
+  align-items: center;
+}
+
+.order-right span{
+  margin-right:10px;
+}
+
+.remove{
+  background-color: #d22f2a;
+
+  &:hover{
+    background-color: #a2231f;
+  }
 }
 
 #total-price{
@@ -76,8 +109,19 @@ button {
   color: white;
   padding: 10px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+  width: 70px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 8px;
+  transition:all 0.3s;
+}
+
+#submit-order{
+  width: 100%;
+  height: 50px;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 button:hover {
