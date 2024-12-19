@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  position:relative;
+}
+
+#logo{
+  width: 300px;
+  height: 150px;
+  margin:10px auto;
+}
+
+#logo img{
+  width: 100%;
+}
+
+/* 여기에 #menu와 #order-summary의 스타일을 추가하세요. */
+#menu{
+  position:absolute;
+  top:190px;
+  left:50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border:1px solid #999;
+  border-radius: 8px;
+  padding:20px;
+  width: 700px;
+  height: 500px;
+}
+
+#menu div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  position:relative;
+}
+
+
+#menu div p{
+  position:absolute;
+  left:500px;
+}
+
+#menu div button{
+  justify-self: flex-end;
+}
+
+#order-summary{
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  top:750px;
+  border:1px solid #999;
+  border-radius: 8px;
+  padding:20px;
+  width: 700px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#total-price{
+  font-weight: bold;
+  font-size: 17px;
+}
+/* 버튼과 관련된 스타일은 아래의 예시를 참고하여 완성하세요. */
+
+button {
+  background-color: #00704a;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005936;
+}
